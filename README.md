@@ -71,7 +71,6 @@ imagem = 'img/ferro.webp'; // Altere este caminho conforme necessário
 |-- styles.css
 |-- script.js
 ```
-a
 ## 🤝 Como Contribuir
 
 1. Faça um fork do projeto.
