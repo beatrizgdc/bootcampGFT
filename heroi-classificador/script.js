@@ -5,7 +5,7 @@ function classificarHeroi() {
   let imagem = '';
 
   // Estrutura de decisão para determinar o nível do herói e a imagem correspondente
-  if (xp < 1000) {
+  if (xp <= 1000) {
     nivel = 'Ferro';
     imagem = 'img/ferro.png';
   } else if (xp >= 1001 && xp <= 2000) {
