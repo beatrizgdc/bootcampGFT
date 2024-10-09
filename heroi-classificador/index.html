@@ -13,9 +13,9 @@
     
     <div class="conteudo-principal">
       <input type="text" id="nome" placeholder="Nome do herói" />
-      <input type="number" id="xp" placeholder="Experiência (XP)" />
+      <input type="number" id="xp" placeholder="Experiência (XP)" min="0" />
       
-      <button onclick="classificarHeroi()">🏆 Classificar Herói 🏆</button>
+      <button type="button" onclick="classificarHeroi()">🏆 Classificar Herói 🏆</button>
     </div>
     
     <div class="resultado" id="resultado"></div>
