@@ -1,28 +1,23 @@
-# ⚔️ Classificador de Nível do Herói ⚔️
+# 3️⃣ Escrevendo as classes de um Jogo
 
-Este é um projeto simples de uma interface interativa que classifica o nível de um herói com base na quantidade de experiência (XP) inserida. O usuário insere o nome do herói e a quantidade de XP, e o sistema retorna o nível correspondente, exibindo uma mensagem e uma imagem representativa do nível do herói.
+Este projeto tem como objetivo criar uma classe genérica para representar um herói em uma aventura. Cada herói terá propriedades básicas e um método para simular um ataque, com uma descrição do ataque que varia de acordo com o tipo do herói.
 
 ## 📋 Funcionalidades
 
-- Formulário para entrada do nome do herói e quantidade de experiência (XP).
-- Classificação automática do nível do herói com base no valor de XP:
-  - **Ferro**: XP menor que 1000
-  - **Bronze**: XP entre 1001 e 2000
-  - **Prata**: XP entre 2001 e 5000
-  - **Ouro**: XP entre 5001 e 7000
-  - **Platina**: XP entre 7001 e 8000
-  - **Ascendente**: XP entre 8001 e 9000
-  - **Imortal**: XP entre 9001 e 10000
-  - **Radiante**: XP acima de 10001
-- Exibição de uma imagem de fundo personalizada e de uma imagem específica do nível do herói após a classificação.
-- Ocultação automática do formulário após a classificação, substituído por uma mensagem e a imagem do herói classificado.
-
+- Criação de uma classe `Heroi` com as seguintes propriedades:
+  - **nome**: Nome do herói.
+  - **idade**: Idade do herói.
+  - **tipo**: Classe do herói, podendo ser guerreiro, mago, monge ou ninja.
+- Método `atacar` que exibe uma mensagem de ataque personalizada para cada tipo de herói:
+  - **Mago**: "usou magia"
+  - **Guerreiro**: "usou espada"
+  - **Monge**: "usou artes marciais"
+  - **Ninja**: "usou shuriken"
+  
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML**: Para a estrutura da página.
-- **CSS**: Para a estilização e layout responsivo.
-- **JavaScript**: Para a lógica de classificação e manipulação do DOM.
-  
+- **JavaScript**: Para implementar as classes, métodos e manipular o comportamento dos heróis.
+
 ## 🚀 Como Usar
 
 ### 1. Clonar o Repositório
@@ -33,44 +28,58 @@ git clone https://github.com/beatrizgdc/bootcampGFT.git
 
 ### 2. Estrutura do Projeto
 
-- **index.html**: Contém o layout básico e o formulário de entrada.
-- **styles.css**: Define a aparência e a estilização do layout.
-- **script.js**: Contém a lógica JavaScript para processar a classificação do herói e manipular o DOM.
-- **img**: Pasta contendo as imagens dos níveis dos heróis (ferro, bronze, prata, ouro, etc.).
+- **index.html**: Contém o layout básico para interagir com a aplicação (opcional).
+- **script.js**: Contém a implementação da classe `Heroi` e do método `atacar`.
 
-### 3. Executar Localmente
+### 3. Executar o Código
 
-1. Abra o arquivo `index.html` no seu navegador.
-2. Preencha o nome do herói e insira a quantidade de experiência (XP).
-3. Clique no botão "Classificar Herói".
-4. O nível do herói será exibido na página com uma mensagem e uma imagem correspondente.
+No arquivo `script.js`, você encontrará a definição da classe e a lógica para exibir o ataque de acordo com o tipo de herói.
 
-### 4. Adicionar Imagens
-
-Você pode adicionar ou alterar as imagens dos níveis do herói. Basta colocar as imagens correspondentes na pasta `img/` e garantir que os caminhos corretos sejam usados no arquivo `script.js`.
-
-Exemplo:
+Exemplo de código:
 
 ```javascript
-imagem = 'img/ferro.webp'; // Altere este caminho conforme necessário
+class Heroi {
+  constructor(nome, idade, tipo) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
+  }
+
+  atacar() {
+    let ataque;
+    switch (this.tipo.toLowerCase()) {
+      case 'mago':
+        ataque = 'usou magia';
+        break;
+      case 'guerreiro':
+        ataque = 'usou espada';
+        break;
+      case 'monge':
+        ataque = 'usou artes marciais';
+        break;
+      case 'ninja':
+        ataque = 'usou shuriken';
+        break;
+      default:
+        ataque = 'realizou um ataque indefinido';
+    }
+    console.log(`O ${this.tipo} atacou usando ${ataque}`);
+  }
+}
+
+// Exemplo de uso
+const heroi1 = new Heroi('Aragorn', 87, 'guerreiro');
+heroi1.atacar(); // O guerreiro atacou usando espada
+
+const heroi2 = new Heroi('Gandalf', 2019, 'mago');
+heroi2.atacar(); // O mago atacou usando magia
 ```
 
-## 📂 Estrutura de Pastas
+### 4. Testar Localmente
 
-```plaintext
-|-- img/
-|   |-- ferro.webp
-|   |-- bronze.webp
-|   |-- prata.webp
-|   |-- ouro.webp
-|   |-- platina.webp
-|   |-- ascendente.webp
-|   |-- imortal.webp
-|   |-- radiante.webp
-|-- index.html
-|-- styles.css
-|-- script.js
-```
+1. Abra o arquivo `index.html` no navegador para interagir com a aplicação (caso tenha uma interface visual).
+2. Caso esteja testando diretamente no console, abra o navegador e execute o código JavaScript para criar heróis e chamar o método `atacar`.
+
 ## 🤝 Como Contribuir
 
 1. Faça um fork do projeto.

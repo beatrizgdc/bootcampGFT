@@ -55,22 +55,6 @@ Exemplo:
 imagem = 'img/ferro.webp'; // Altere este caminho conforme necessário
 ```
 
-## 📂 Estrutura de Pastas
-
-```plaintext
-|-- img/
-|   |-- ferro.webp
-|   |-- bronze.webp
-|   |-- prata.webp
-|   |-- ouro.webp
-|   |-- platina.webp
-|   |-- ascendente.webp
-|   |-- imortal.webp
-|   |-- radiante.webp
-|-- index.html
-|-- styles.css
-|-- script.js
-```
 ## 🤝 Como Contribuir
 
 1. Faça um fork do projeto.
