@@ -47,6 +47,23 @@ input[type="text"]:focus-visible, input[type="number"]:focus-visible {
   border: 1px solid #1e0e2c;
 }
 
+select {
+  width: calc(100% - 20px);
+  height: 45px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white;
+}
+
+select:focus-visible {
+  border: 1px solid #1e0e2c;
+  outline: none;
+}
+
+
 button {
   background-color: #1e0e2c;
   color: white;
