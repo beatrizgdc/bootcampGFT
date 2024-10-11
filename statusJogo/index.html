@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="img/Stone_Sword_25707.ico">
+    <title>Calculadora de Partidas ⚔️ Rankeadas ⚔️</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Criar Herói</h1>
+        <form id="hero-form">
+            <input type="text" id="nome" required placeholder="Nome:"><br>
+            <input type="number" id="idade" required placeholder="Idade:"><br>
+
+            <label for="tipo">Tipo de Herói:</label>
+            <select id="tipo" required>
+                <option value="">Selecione</option>
+                <option value="mago">Mago</option>
+                <option value="guerreiro">Guerreiro</option>
+                <option value="monge">Monge</option>
+                <option value="ninja">Ninja</option>
+            </select><br>
+
+            <button type="button" onclick="criarHeroi()">Criar Herói e Atacar</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
